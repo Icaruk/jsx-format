@@ -1,0 +1,78 @@
+{
+	"version": "0.0.1",
+	"name": "jsx-format",
+	"author": "Icaruk",
+	"publisher": "Icaruk",
+	"keywords": [
+		"productivity",
+		"format",
+		"jsx"
+	],
+	"icon": "images/logo.jpg",
+	"displayName": "jsx-format",
+	"description": "Format one-liner JSX code into multi-line",
+	"engines": {
+		"vscode": "^1.69.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.format",
+				"title": "[jsx-format] Format JSX",
+				"shortTitle": "fjsx"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.format",
+				"key": "alt+f"
+			}
+		],
+		"configuration": {
+			"title": "jsx-format",
+			"properties": {
+				"jsx-format.minimumProps": {
+					"description": "Minimum number of props to format",
+					"type": "number",
+					"default": 2,
+					"enum": [
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "^18.6.4",
+		"@types/vscode": "^1.69.1",
+		"glob": "^8.0.3",
+		"tslint": "^5.20.1",
+		"typescript": "^4.7.4",
+		"vscode-test": "^1.2.2"
+	}
+}

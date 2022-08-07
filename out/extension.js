@@ -6,7 +6,6 @@ exports.activate = void 0;
 const vscode = require("vscode");
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
-// export function activate(context: vscode.ExtensionContext) {
 function activate({ subscriptions }) {
     const disposable = vscode.commands.registerCommand('extension.format', function () {
         // Get the active text editor

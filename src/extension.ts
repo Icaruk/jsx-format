@@ -8,7 +8,6 @@ import * as vscode from 'vscode';
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 
-// export function activate(context: vscode.ExtensionContext) {
 export function activate({ subscriptions }: vscode.ExtensionContext) {	
 	
 	const disposable = vscode.commands.registerCommand('extension.format', function () {
@@ -51,10 +50,6 @@ export function activate({ subscriptions }: vscode.ExtensionContext) {
 				});
 				
 			};
-			
-			
-			
-			
 			
 		}
 	});
